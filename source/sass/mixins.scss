@@ -1,0 +1,13 @@
+@mixin fontPTMono ($font-size: 16px, $line-height: 22px, $color: #666666) {
+  font-family: "PTMono", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin fontRobotoCondensed ($font-size, $line-height, $color: #ffffff) {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
