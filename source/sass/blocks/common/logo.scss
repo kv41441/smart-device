@@ -1,0 +1,63 @@
+.logo {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  min-width: 210px;
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.logo__text-container {
+  margin-top: 6px;
+  margin-left: 13px;
+}
+
+.logo__header {
+  margin: 0;
+  padding: 0;
+
+  @include fontRobotoCondensed(25px, 29px);
+}
+
+.logo__description {
+  margin: 0;
+  padding: 1px 0 0 0;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #788891;
+  text-transform: lowercase;
+}
+
+@media (max-width: $mobile-width) {
+  .logo {
+    img {
+      margin: -3px 0 0 4px;
+
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .logo__text-container {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
