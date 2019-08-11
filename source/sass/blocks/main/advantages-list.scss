@@ -1,0 +1,199 @@
+.advantages-list {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+  padding: 111px 0 30px 16px;
+
+  width: 1186px;
+
+  list-style: none;
+}
+
+.advantages-list__item {
+  box-sizing: border-box;
+
+  position: relative;
+
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  padding: 95px 0 65px 42px;
+
+  width: 570px;
+
+  border: 1px solid #ebebeb;
+  border-left: 3px solid $color-blue;
+
+  &:hover {
+    border: 1px solid $color-blue;
+
+    background-color: $color-blue;
+
+    h3,
+    p {
+      color: #ffffff;
+    }
+
+    svg {
+      fill: #ffffff;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+
+    width: 350px;
+
+    @include fontRobotoCondensed(24px, 34px, $color-blue);
+  }
+
+  p {
+    margin: 15px 0 0 0;
+    padding: 0;
+
+    width: 480px;
+
+    @include fontPTMono;
+  }
+
+  svg {
+    position: absolute;
+    top: 40px;
+    left: 42px;
+
+    fill: #00b2ff;
+  }
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+  }
+
+  &--confidentiality {
+    padding-bottom: 85px;
+
+    svg {
+      top: 44px;
+    }
+  }
+
+  &--cost {
+    padding-bottom: 88px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .advantages-list {
+    padding: 54px 0 0 0;
+
+    width: 720px;
+  }
+
+  .advantages-list__item {
+    margin-right: 30px;
+    padding: 66px 0 19px 25px;
+
+    width: 345px;
+
+    border-left-width: 2px;
+
+    h3 {
+      width: 320px;
+
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    p {
+      margin-top: 9px;
+
+      width: 295px;
+
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    svg {
+      top: 24px;
+      left: 26px;
+    }
+
+    &--suppliers {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &--confidentiality {
+      padding-bottom: 53px;
+
+      h3 {
+        margin-top: -3px;
+      }
+
+      p {
+        margin-top: 14px;
+      }
+
+      svg {
+        top: 26px;
+
+        width: 30px;
+        height: 26px;
+      }
+    }
+
+    &--cost {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .advantages-list {
+    display: block;
+
+    padding-top: 36px;
+
+    width: 320px;
+  }
+
+  .advantages-list__item {
+    margin: 0 auto 20px auto;
+    padding-top: 72px;
+    padding-bottom: 24px;
+
+    width: 290px;
+
+    h3 {
+      width: 240px;
+
+      font-size: 20px;
+      line-height: 140.62%;
+    }
+
+    p {
+      width: 248px;
+    }
+
+    &:nth-of-type(2n) {
+      margin: 0 auto 20px auto;
+    }
+
+    &--suppliers {
+      padding-top: 68px;
+
+      p {
+        width: 250px;
+      }
+    }
+  }
+}

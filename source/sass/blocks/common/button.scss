@@ -1,6 +1,8 @@
 .button {
   box-sizing: border-box;
 
+  display: inline-block;
+
   margin: 0;
   padding: 13px 28px;
 
@@ -17,5 +19,57 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.05em;
+  }
+
+  &--introduce {
+    padding: 17px 46px;
+
+    span {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    border-color: $color-blue;
+
+    background-color: $color-blue;
+  }
+
+  &--about-company {
+    padding: 13px 50px;
+
+    border: 1px solid $color-blue;
+
+    span {
+      color: $color-blue;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .button {
+    &--introduce {
+      padding: 17px 33px;
+
+      span {
+        min-width: 351px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .button {
+    &--introduce {
+      padding: 17px 32px;
+
+      span {
+        min-width: 250px;
+      }
+    }
+
+    &--about-company {
+      padding: 12px 50px;
+    }
   }
 }

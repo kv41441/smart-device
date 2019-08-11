@@ -1,0 +1,145 @@
+.about-company {
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  padding: 0;
+
+  max-width: 1440px;
+}
+
+.about-company__wrapper {
+  box-sizing: border-box;
+
+  position: relative;
+
+  margin: 45px 0 0 0;
+  padding: 0 0 0 323px;
+
+  h2 {
+    margin: 0;
+
+    width: 200px;
+
+    @include fontRobotoCondensed(36px, 51px, #666666);
+    font-weight: 400;
+  }
+
+  p {
+    margin: 21px 0 0 0;
+
+    width: 985px;
+
+    @include fontPTMono;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 113px;
+
+    width: 220px;
+    height: 317px;
+
+    background: url("../img/2005.jpg") no-repeat 0 0;
+    background-size: 220px 317px;
+  }
+}
+
+.about-company__button-wrapper {
+  margin: 38px 0 0 0;
+  padding: 0;
+}
+
+.about-company__text-hidden-points {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .about-company {
+    padding-bottom: 30px;
+
+    width: 750px;
+  }
+
+  .about-company__wrapper {
+    margin-top: 26px;
+    padding: 0 0 0 200px;
+
+    h2 {
+      width: 180px;
+
+      font-size: 32px;
+      line-height: 140.62%;
+    }
+
+    p {
+      margin: 25px 0 0 4px;
+
+      width: 535px;
+
+      &:last-of-type {
+        margin-top: 20px;
+      }
+    }
+
+    &::before {
+      top: -2px;
+      left: -18px;
+
+      width: 251px;
+      height: 362px;
+
+      background-size: 251px 362px;
+    }
+  }
+
+  .about-company__text-hidden-points {
+    display: inline;
+  }
+
+  .about-company__text-hidden-part {
+    display: none;
+  }
+
+  .about-company__button-wrapper {
+    margin: 42px 0 0 3px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about-company {
+    width: 320px;
+  }
+
+  .about-company__wrapper {
+    margin: 60px auto 0 auto;
+    padding-left: 0;
+
+    width: 294px;
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      margin-top: 20px;
+
+      width: 288px;
+
+      &:last-of-type {
+        margin-top: 40px;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .about-company__button-wrapper {
+    margin-top: 30px;
+  }
+}
