@@ -1,0 +1,38 @@
+.social {
+  padding: 0;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 0 0 5px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social__item {
+  margin: 0 15px 0 0;
+  padding: 0;
+
+  svg {
+    fill: #cdcdcd;
+
+    cursor: pointer;
+
+    &:hover {
+      fill: $color-blue;
+    }
+
+    &:active {
+      fill: blue;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .social {
+    flex-grow: 1;
+  }
+}

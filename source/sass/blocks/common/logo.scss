@@ -22,6 +22,11 @@
   padding: 0;
 
   @include fontRobotoCondensed(25px, 29px);
+
+  &--dark {
+    letter-spacing: 0.015em;
+    color: #203c42;
+  }
 }
 
 .logo__description {
@@ -37,27 +42,29 @@
 
 @media (max-width: $mobile-width) {
   .logo {
-    img {
-      margin: -3px 0 0 4px;
+    &--header {
+      img {
+        margin: -3px 0 0 4px;
 
-      width: 44px;
-      height: 44px;
+        width: 44px;
+        height: 44px;
+      }
+
+      .logo__text-container {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        white-space: nowrap;
+
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+      }
     }
-  }
-
-  .logo__text-container {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
   }
 }

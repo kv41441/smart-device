@@ -1,5 +1,5 @@
 .form {
-  padding: 0 0 113px 0;
+  padding: 0 0 114px 0;
 
   max-width: 1440px;
 }
@@ -71,7 +71,7 @@
 }
 
 .form__question-wrapper {
-  margin-top: 39px;
+  margin-top: 19px;
 }
 
 .form__list {
@@ -85,6 +85,8 @@
 }
 
 .form__item {
+  margin-bottom: 20px;
+
   &:not(:nth-of-type(2n)) {
     margin-right: 29px;
   }
@@ -167,6 +169,10 @@
 
 @media (max-width: $tablet-width) {
   .form {
+    box-sizing: border-box;
+
+    padding-bottom: 104px;
+
     width: 595px;
   }
 
@@ -189,6 +195,8 @@
   }
 
   .form__fields-container {
+    box-sizing: border-box;
+
     margin-top: 4px;
     margin-left: 1px;
     padding-left: 4px;
@@ -203,7 +211,7 @@
   }
 
   .form__question-wrapper {
-    margin-top: 42px;
+    margin-top: 22px;
   }
 
   .form__submit-button-wrapper {
@@ -221,6 +229,12 @@
       width: 210px;
     }
   }
+
+  .form__item {
+    &:not(:nth-of-type(2n)) {
+      margin-right: 26px;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -236,9 +250,13 @@
 
   .form__list {
     margin-top: 23px;
+
+    width: 295px;
   }
 
   .form__item {
+    margin-bottom: 0;
+
     &:first-of-type {
       margin-bottom: 31px;
     }
@@ -261,6 +279,8 @@
 
   .form__question-wrapper {
     margin-top: 31px;
+
+    width: 290px;
   }
 
   .form__fields-container {
