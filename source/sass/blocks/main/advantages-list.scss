@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
 
-  margin: 0 auto;
   padding: 111px 0 30px 16px;
 
   width: 1186px;
@@ -40,6 +39,8 @@
     svg {
       fill: #ffffff;
     }
+
+    cursor: pointer;
   }
 
   h3 {

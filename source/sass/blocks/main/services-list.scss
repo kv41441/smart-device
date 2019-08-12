@@ -1,0 +1,149 @@
+.services-list {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  list-style: none;
+}
+
+.services-list__item {
+  box-sizing: border-box;
+
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  &:not(:nth-of-type(3n)) {
+    margin-right: 30px;
+  }
+
+  &:nth-of-type(4n) {
+    margin-left: 18px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    margin-top: -110px;
+
+    width: 370px;
+    height: 620px;
+
+    opacity: 0.2;
+  }
+
+  &--production {
+    margin-left: 18px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: 3;
+    bottom: 4px;
+    right: 0;
+
+    width: 63px;
+    height: 63px;
+
+    background: $color-blue url("../img/service-arrow.svg") no-repeat 0 0;
+    background-size: 8px 8px;
+    background-position: 30px 27px;
+  }
+}
+
+.services-list__header {
+  margin: 102px 0 0 44px;
+
+  width: 170px;
+
+  @include fontRobotoCondensed(20px, 30px);
+  font-weight: 400;
+}
+
+@media (max-width: $tablet-width) {
+  .services-list__item {
+    flex-grow: 1;
+
+    margin-bottom: 41px;
+
+    &:not(:nth-of-type(3n)) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(4n) {
+      margin-left: 0;
+    }
+
+    &--production {
+      margin-left: 0;
+    }
+
+    img {
+      margin-top: -100px;
+      margin-left: -2px;
+
+      min-width: 715px;
+      height: 256px;
+    }
+
+    &::before {
+      right: 2px;
+    }
+
+    &--components {
+      margin-top: 10px;
+
+      img {
+        margin-top: -110px;
+      }
+    }
+  }
+
+  .services-list__header {
+    margin-top: 41px;
+    margin-left: 42px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .services-list__item {
+    margin-bottom: 5px;
+
+    max-width: 290px;
+
+    img {
+      margin-top: -80px;
+      padding-left: 2px;
+
+      min-width: 290px;
+      height: 256px;
+    }
+
+    &::before {
+      right: 0;
+
+      background-position: 27px 27px;
+    }
+
+    &--components {
+      margin-top: 10px;
+
+      img {
+        margin-top: -90px;
+      }
+    }
+  }
+
+  .services-list__header {
+    margin-left: 35px;
+
+    width: 160px;
+  }
+}

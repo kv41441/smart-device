@@ -1,0 +1,42 @@
+.contact-form {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  background-color: $color-blue;
+}
+
+.contact-form__form {
+  position: relative;
+
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 161px;
+    left: 118px;
+
+    width: 511px;
+    height: 288px;
+
+    // @media () {
+    // background: url("../img/paper-airplane-desktop@2x.png") no-repeat 0 0;
+    // }
+
+    background: url("../img/paper-airplane-desktop@1x.png") no-repeat 0 0;
+    background-size: 511px 288px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .contact-form__form {
+    &::before {
+      display: none;
+    }
+  }
+}

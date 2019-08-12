@@ -281,57 +281,78 @@
     </section>
 
     <section class="services">
-      <h2 class="services__header">
-        Service Device предлагает следующие товары и услуги
-      </h2>
-      <ul class="services__list services-list">
-        <li class="services-list__item">
-          <a href="#">
-            <h3 class="services-list__header">Производство печатных плат</h3>
-          </a>
-        </li>
-        <li class="services-list__item">
-          <a href="#">
-            <h3 class="services-list__header">Монтаж печатных плат</h3>
-          </a>
-        </li>
-        <li class="services-list__item">
-          <a href="#">
-            <h3 class="services-list__header">Комплектующие для светотехники</h3>
-          </a>
-        </li>
-      </ul>
+      <div class="services__wrapper">
+        <h2 class="services__header">
+          Service Device предлагает следующие товары и услуги
+        </h2>
+        <ul class="services__list services-list">
+          <li class="services-list__item services-list__item--production">
+            <a href="#">
+              <h3 class="services-list__header">Производство печатных плат</h3>
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/services-production-mobile@1x.jpg 1x, img/services-production-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/services-production-tablet@1x.jpg 1x, img/services-production-tablet@2x.jpg 2x">
+                <img src="img/services-production-desktop@1x.jpg" srcset="img/services-production-desktop@2x.jpg 2x" alt="Производство печатных плат">
+              </picture>
+            </a>
+          </li>
+          <li class="services-list__item services-list__item--mounting">
+            <a href="#">
+              <h3 class="services-list__header">Монтаж печатных плат</h3>
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/services-mounting-mobile@1x.jpg 1x, img/services-mounting-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/services-mounting-tablet@1x.jpg 1x, img/services-mounting-tablet@2x.jpg 2x">
+                <img src="img/services-mounting-desktop@1x.jpg" srcset="img/services-mounting-desktop@2x.jpg 2x" alt="Монтаж печатных плат">
+              </picture>
+            </a>
+          </li>
+          <li class="services-list__item services-list__item--components">
+            <a href="#">
+              <h3 class="services-list__header">Комплектующие для светотехники</h3>
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/services-components-mobile@1x.jpg 1x, img/services-components-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/services-components-tablet@1x.jpg 1x, img/services-components-tablet@2x.jpg 2x">
+                <img src="img/services-components-desktop@1x.jpg" srcset="img/services-components-desktop@2x.jpg 2x" alt="Комплектующие для светотехники">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="contact-form">
-      <form class="contact-form__form form" action="#" method="post" name="form">
-        <div class="form__header-wrapper">
-          <h2>Остались вопросы? Задайте их нам!</h2>
-          <p>Мы проконсультируем Вас бесплатно</p>
-        </div>
-        <ul class="form__list" role="none">
-          <li class="form__item">
-            <label class="visually-hidden" for="form__name">Введите имя</label>
-            <input type="text" name="form__name" id="form__name" placeholder="Имя">
-          </li>
-          <li class="form__item">
-            <label class="visually-hidden" for="form__tel">Введите имя</label>
-            <input type="tel" name="form__tel" id="form__tel" placeholder="Телефон">
-          </li>
-        </ul>
-        <div class="form__question-wrapper">
-          <label class="visually-hidden" for="form__question">Введите вопрос</label>
-          <textarea name="form__question" id="form__question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-        </div>
-        <div class="form__submit-button-wrapper">
-          <button class="form__submit-button button" type="submit" name="form__submit-button">
-            <span>Задать вопроc</span>
-          </button>
-          <div class="form__checkbox-wrapper">
-            <input type="checkbox" name="form__checkbox" id="form__checkbox" checked>
-            <label class="form__checkbox-label" for="form__checkbox">
-              Я согласен на обработку персональных данных
-            </label>
+      <form class="contact-form__form form" method="post" name="form">
+        <div class="form__wrapper">
+          <div class="form__header-wrapper">
+            <h2>Остались вопросы? Задайте их нам!</h2>
+            <p>Мы проконсультируем Вас бесплатно</p>
+          </div>
+          <fieldset class="form__fields-container">
+            <ul class="form__list" role="none">
+              <li class="form__item">
+                <label class="visually-hidden" for="form__name">Введите имя</label>
+                <input type="text" name="form__name" id="form__name" placeholder="Имя">
+              </li>
+              <li class="form__item">
+                <label class="visually-hidden" for="form__tel">Введите телефон</label>
+                <input type="tel" name="form__tel" id="form__tel" placeholder="Телефон">
+              </li>
+            </ul>
+            <div class="form__question-wrapper">
+              <label class="visually-hidden" for="form__question">Введите вопрос</label>
+              <textarea name="form__question" id="form__question" cols="30" rows="6" placeholder="Ваш вопрос"></textarea>
+            </div>
+          </fieldset>
+          <div class="form__submit-button-wrapper">
+            <button class="form__submit-button button button--form" type="submit" name="form__submit-button">
+              <span>Задать вопроc</span>
+            </button>
+            <div class="form__checkbox-wrapper">
+              <input type="checkbox" name="form__checkbox" id="form__checkbox" checked>
+              <label class="form__checkbox-label" for="form__checkbox">
+                Я согласен на обработку персональных данных
+              </label>
+            </div>
           </div>
         </div>
       </form>
