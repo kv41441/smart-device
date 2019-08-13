@@ -1,0 +1,45 @@
+.request-call-popup {
+  display: none;
+
+  position: absolute;
+  z-index: 999;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0 auto;
+  padding: 0;
+
+  width: 500px;
+
+  &--open {
+    display: block;
+  }
+}
+
+.request-call-popup__close-button {
+  position: absolute;
+  z-index: 5;
+
+  top: 20px;
+  right: 20px;
+
+  width: 16.5px;
+  height: 16.5px;
+
+  font-size: 0;
+
+  background: transparent url("../img/popup-close.svg") no-repeat 0 0;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

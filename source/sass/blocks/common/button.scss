@@ -125,6 +125,12 @@
       }
     }
   }
+
+  &--popup {
+    padding: 13px 0;
+
+    width: 411px;
+  }
 }
 
 @media (max-width: $tablet-width) {
