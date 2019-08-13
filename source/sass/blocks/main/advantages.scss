@@ -18,6 +18,23 @@
 
     //transform: rotate(45deg);
   }*/
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 8px;
+    right: 11px;
+
+    width: 335px;
+    height: 335px;
+
+    background: url("../img/triangle-big-gray.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+
+    //transform: rotate(45deg);
+  }
 }
 
 .advantages__list {

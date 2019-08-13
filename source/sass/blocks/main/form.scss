@@ -5,11 +5,45 @@
 }
 
 .form__wrapper {
+  position: relative;
+
   margin: 0;
   padding: 91px 0 0 51.3%;
 
   @media (max-width: 1220px) {
     padding-left: 42%;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    bottom: 251px;
+    right: -238px;
+
+    width: 270px;
+    height: 270px;
+
+    background: url("../img/triangle.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -98px;
+    right: -391px;
+
+    width: 414px;
+    height: 414px;
+
+    background: url("../img/triangle.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+
+    transform: rotate(60deg);
   }
 }
 
@@ -195,6 +229,14 @@
 
   .form__wrapper {
     padding: 80px 0 0 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .form__header-wrapper {
