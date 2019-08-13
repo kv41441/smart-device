@@ -1,12 +1,18 @@
 .advantages-list {
   box-sizing: border-box;
 
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
 
   padding: 111px 0 30px 16px;
 
   width: 1186px;
+
+  @media (max-width: 1220px) {
+    width: 100%;
+  }
 
   list-style: none;
 }
@@ -22,6 +28,10 @@
   padding: 95px 0 65px 42px;
 
   width: 570px;
+
+  @media (max-width: 1220px) {
+    width: 47%;
+  }
 
   border: 1px solid #ebebeb;
   border-left: 3px solid $color-blue;
@@ -50,6 +60,10 @@
 
     width: 350px;
 
+    @media (max-width: 1220px) {
+      width: 100%;
+    }
+
     @include fontRobotoCondensed(24px, 34px, $color-blue);
   }
 
@@ -58,6 +72,12 @@
     padding: 0;
 
     width: 480px;
+
+    @media (max-width: 1220px) {
+      padding-right: 0;
+
+      width: 100%;
+    }
 
     @include fontPTMono;
   }

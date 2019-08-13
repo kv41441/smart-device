@@ -18,6 +18,26 @@
   a {
     @include fontPTMono(16px, 18px, #ffffff);
     text-decoration: none;
+
+    svg {
+      fill: #00b2ff;
+    }
+
+    &:hover {
+      color: $color-blue;
+
+      svg {
+        fill: $light-blue-color;
+      }
+    }
+
+    &:active {
+      color: $light-blue-color;
+
+      svg {
+        fill: #ffffff;
+      }
+    }
   }
 }
 

@@ -31,6 +31,16 @@
     @include fontPTMono(15px, 25px, $bg-dark-color);
     opacity: 0.5;
     text-decoration: none;
+
+    &:hover {
+      color: $color-blue;
+      opacity: 1;
+    }
+
+    &:active {
+      color: blue;
+      opacity: 1;
+    }
   }
 }
 
@@ -52,6 +62,8 @@
   .footer-nav {
     box-sizing: border-box;
 
+    position: relative;
+
     margin-top: 10px;
     padding-left: 15px;
 
@@ -61,24 +73,57 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 
     h2 {
-      margin-top: 30px;
-      margin-bottom: 26px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 30px;
+      padding-bottom: 26px;
     }
-  }
 
-  .footer-nav__list {
-    position: absolute;
+    &::before {
+      content: "";
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
+      position: absolute;
+      top: 36px;
+      right: 17px;
 
-    white-space: nowrap;
+      width: 15px;
+      height: 1px;
 
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+      background-color: #000000;
+
+      opacity: 0.2;
+    }
+
+    &::after {
+      content: "";
+
+      display: none;
+
+      position: absolute;
+      top: 36px;
+      right: 17px;
+
+      width: 15px;
+      height: 1px;
+
+      background-color: #000000;
+
+      transform: rotate(90deg);
+      opacity: 0.2;
+    }
+
+    &--open {
+      padding-bottom: 30px;
+    }
+
+    &--close {
+      .footer-nav__list {
+        @include styleVisuallyHidden;
+      }
+
+      &::after {
+        display: block;
+      }
+    }
   }
 }

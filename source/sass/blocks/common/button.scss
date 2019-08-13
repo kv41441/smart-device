@@ -23,6 +23,26 @@
     letter-spacing: 0.05em;
   }
 
+  &--nav {
+    &:hover {
+      border-color: blue;
+      background-color: #ffffff;
+
+      span {
+        color: $color-blue;
+      }
+    }
+
+    &:active {
+      border-color: #ffffff;
+      background-color: blue;
+
+      span {
+        color: #ffffff;
+      }
+    }
+  }
+
   &--introduce {
     padding: 17px 46px;
 
@@ -34,6 +54,24 @@
     border-color: $color-blue;
 
     background-color: $color-blue;
+
+    &:hover {
+      border-color: blue;
+      background-color: #ffffff;
+
+      span {
+        color: $color-blue;
+      }
+    }
+
+    &:active {
+      border-color: #ffffff;
+      background-color: blue;
+
+      span {
+        color: #ffffff;
+      }
+    }
   }
 
   &--about-company {
@@ -44,12 +82,48 @@
     span {
       color: $color-blue;
     }
+
+    &:hover {
+      border-color: blue;
+      background-color: $color-blue;
+
+      span {
+        color: #ffffff;
+      }
+    }
+
+    &:active {
+      border-color: #ffffff;
+      background-color: blue;
+
+      span {
+        color: #ffffff;
+      }
+    }
   }
 
   &--form {
     padding: 13px 80px;
 
     background-color: $color-blue;
+
+    &:hover {
+      border-color: blue;
+      background-color: #ffffff;
+
+      span {
+        color: $color-blue;
+      }
+    }
+
+    &:active {
+      border-color: #ffffff;
+      background-color: blue;
+
+      span {
+        color: #ffffff;
+      }
+    }
   }
 }
 

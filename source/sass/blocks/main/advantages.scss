@@ -1,6 +1,23 @@
-.advangates {
-  margin: 0;
-  padding: 0;
+.advantages {
+  position: relative;
+  z-index: 1;
+
+  /*&::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 636px;
+    height: 636px;
+
+    background: url("../img/triangle-big-gray.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+
+    //transform: rotate(45deg);
+  }*/
 }
 
 .advantages__list {

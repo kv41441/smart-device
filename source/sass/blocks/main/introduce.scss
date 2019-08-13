@@ -1,8 +1,12 @@
 .introduce {
-  margin: 0;
-  padding: 0;
+  z-index: 1;
+  position: relative;
 
-  background: $bg-dark-color;
+  margin: -93px 0 0 0;
+  padding: 93px 0 0 0;
+
+  background: $bg-dark-color url("../img/bg-image.png") no-repeat 0 0;
+  background-size: 100% 100%;
 
   overflow: hidden;
 }
@@ -54,6 +58,36 @@
     min-width: 705px;
     height: 515px;
   }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: -136px;
+    left: 101px;
+
+    width: 637px;
+    height: 640px;
+
+    background: url("../img/triangle-big.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 128px;
+    left: 68px;
+
+    width: 373px;
+    height: 377px;
+
+    background: url("../img/triangle-medium.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+  }
 }
 
 .introduce__header {
@@ -61,6 +95,11 @@
   padding: 0;
 
   width: 750px;
+
+  @media (max-width: 1250px) {
+    width: 600px;
+    text-align: center;
+  }
 
   @include fontRobotoCondensed(80px, 94px);
   font-weight: bold;
@@ -75,6 +114,10 @@
   padding: 0 0 0 97px;
 
   width: 650px;
+
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
 
   @include fontPTMono(22px, 34px, #ffffff);
   text-transform: lowercase;
@@ -128,6 +171,26 @@
       min-width: 465px;
       height: 340px;
     }
+
+    &::before {
+      top: -148px;
+      left: -52px;
+
+      width: 502px;
+      height: 502px;
+
+      background-size: 502px 502px;
+    }
+
+    &::after {
+      top: 60px;
+      left: -78px;
+
+      width: 294px;
+      height: 294px;
+
+      background-size: 294px 294px;
+    }
   }
 
   .introduce__header {
@@ -137,6 +200,7 @@
 
     font-size: 60px;
     line-height: 70px;
+    text-align: left;
   }
 
   .introduce__description {
@@ -184,6 +248,26 @@
 
       min-width: 295px;
       height: 220px;
+    }
+
+    &::before {
+      top: -131px;
+      left: 177px;
+
+      width: 479.4px;
+      height: 479.4px;
+
+      background-size: 479.4px 479.4px;
+    }
+
+    &::after {
+      top: 68px;
+      left: 152px;
+
+      width: 281px;
+      height: 281px;
+
+      background-size: 281px 281px;
     }
   }
 

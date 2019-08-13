@@ -11,10 +11,38 @@
 .services-list__item {
   box-sizing: border-box;
 
-  position: relative;
-
   margin: 0;
   padding: 0;
+
+  &:hover {
+    img {
+      opacity: 0.4;
+    }
+
+    a {
+      &::before {
+        margin: -1px;
+
+        border: 1px solid #ffffff;
+      }
+    }
+  }
+
+  &:active {
+    img {
+      opacity: 0.6;
+    }
+
+    a {
+      &::before {
+        margin: -1px;
+
+        border: 1px solid #ffffff;
+
+        background-color: #2e80ff;
+      }
+    }
+  }
 
   &:not(:nth-of-type(3n)) {
     margin-right: 30px;
@@ -25,7 +53,26 @@
   }
 
   a {
+    position: relative;
+
+    display: block;
     text-decoration: none;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: 3;
+      bottom: 4px;
+      right: 0;
+
+      width: 63px;
+      height: 63px;
+
+      background: $color-blue url("../img/service-arrow.svg") no-repeat 0 0;
+      background-size: 8px 8px;
+      background-position: 30px 27px;
+    }
   }
 
   img {
@@ -39,22 +86,6 @@
 
   &--production {
     margin-left: 18px;
-  }
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    z-index: 3;
-    bottom: 4px;
-    right: 0;
-
-    width: 63px;
-    height: 63px;
-
-    background: $color-blue url("../img/service-arrow.svg") no-repeat 0 0;
-    background-size: 8px 8px;
-    background-position: 30px 27px;
   }
 }
 
@@ -85,16 +116,18 @@
       margin-left: 0;
     }
 
+    a {
+      &::before {
+        right: 2px;
+      }
+    }
+
     img {
       margin-top: -100px;
       margin-left: -2px;
 
       min-width: 715px;
       height: 256px;
-    }
-
-    &::before {
-      right: 2px;
     }
 
     &--components {
@@ -118,18 +151,20 @@
 
     max-width: 290px;
 
+    a {
+      &::before {
+        right: 0;
+
+        background-position: 27px 27px;
+      }
+    }
+
     img {
       margin-top: -80px;
       padding-left: 2px;
 
       min-width: 290px;
       height: 256px;
-    }
-
-    &::before {
-      right: 0;
-
-      background-position: 27px 27px;
     }
 
     &--components {

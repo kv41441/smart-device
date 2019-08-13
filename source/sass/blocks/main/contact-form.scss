@@ -7,10 +7,51 @@
   width: 100%;
 
   background-color: $color-blue;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -60px;
+    left: 209px;
+
+    width: 637px;
+    height: 640px;
+
+    background: url("../img/triangle-big.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 203px;
+    left: 175px;
+
+    width: 373px;
+    height: 377px;
+
+    background: url("../img/triangle-medium.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+
+  @media (max-width: 1430px) {
+    &::before {
+      left: 0;
+      background-size: 80%;
+    }
+
+    &::after {
+      left: 0;
+      background-size: 80%;
+    }
+  }
 }
 
 .contact-form__form {
   position: relative;
+  z-index: 1;
 
   margin: 0 auto;
 
@@ -18,22 +59,39 @@
     content: "";
 
     position: absolute;
+    z-index: 2;
     top: 161px;
     left: 118px;
 
     width: 511px;
     height: 288px;
 
-    // @media () {
-    // background: url("../img/paper-airplane-desktop@2x.png") no-repeat 0 0;
-    // }
-
     background: url("../img/paper-airplane-desktop@1x.png") no-repeat 0 0;
     background-size: 511px 288px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/paper-airplane-desktop@2x.png") no-repeat 0 0;
+    }
+
+    @media (max-width: 1430px) {
+      left: 2%;
+
+      background-size: 358px 202px;
+    }
   }
 }
 
 @media (max-width: $tablet-width) {
+  .contact-form {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
   .contact-form__form {
     &::before {
       display: none;
