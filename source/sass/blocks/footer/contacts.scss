@@ -104,7 +104,11 @@
       opacity: 0.2;
     }
 
-    &--close {
+    &--closed {
+      .contacts__list {
+        @include styleVisuallyHidden;
+      }
+
       &::after {
         display: block;
       }

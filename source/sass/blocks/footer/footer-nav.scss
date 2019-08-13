@@ -112,11 +112,11 @@
       opacity: 0.2;
     }
 
-    &--open {
+    &--opened {
       padding-bottom: 30px;
     }
 
-    &--close {
+    &--closed {
       .footer-nav__list {
         @include styleVisuallyHidden;
       }
