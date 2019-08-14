@@ -197,46 +197,6 @@
           </picture>
         </div>
       </div>
-      <section class="request-call-popup request-call-popup--closed">
-        <form class="request-call-popup__form form--popup" method="post" name="popup-form">
-          <button class="request-call-popup__close-button" type="button" name="request-call-popup__close-button">
-            Закрыть
-          </button>
-          <div class="form__wrapper">
-            <div class="form__header-wrapper">
-              <h2>Закажите звонок</h2>
-              <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-            </div>
-            <fieldset class="form__fields-container">
-              <ul class="form__list" role="none">
-                <li class="form__item">
-                  <label class="visually-hidden" for="popup-form__name">Введите имя</label>
-                  <input type="text" name="popup-form__name" id="popup-form__name" placeholder="Имя">
-                </li>
-                <li class="form__item">
-                  <label class="visually-hidden" for="popup-form_tel">Введите телефон</label>
-                  <input type="tel" name="popup-form__tel" id="popup-form__tel" placeholder="Телефон">
-                </li>
-              </ul>
-              <div class="form__question-wrapper">
-                <label class="visually-hidden" for="form__question">Введите вопрос</label>
-                <textarea name="popup-form__question" id="popup-form__question" cols="30" rows="6" placeholder="Ваш вопрос"></textarea>
-              </div>
-            </fieldset>
-            <div class="form__submit-button-wrapper">
-              <button class="form__submit-button button button--form button--popup" type="submit" name="form__submit-button">
-                <span>Отправить</span>
-              </button>
-              <div class="form__checkbox-wrapper">
-                <input type="checkbox" name="popup-form__checkbox" id="popup-form__checkbox" checked>
-                <label class="form__checkbox-label" for="popup-form__checkbox">
-                  Я согласен на обработку персональных данных
-                </label>
-              </div>
-            </div>
-          </div>
-        </form>
-      </section>
     </section>
 
     <div class="page-main__wrapper">
@@ -390,6 +350,47 @@
       </form>
     </section>
   </main>
+
+  <section class="request-call-popup request-call-popup--closed">
+    <form class="request-call-popup__form form--popup" method="post" name="popup-form">
+      <button class="request-call-popup__close-button" type="button" name="request-call-popup__close-button">
+        Закрыть
+      </button>
+      <div class="form__wrapper">
+        <div class="form__header-wrapper">
+          <h2>Закажите звонок</h2>
+          <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        </div>
+        <fieldset class="form__fields-container">
+          <ul class="form__list" role="none">
+            <li class="form__item">
+              <label class="visually-hidden" for="popup-form__name">Введите имя</label>
+              <input type="text" name="popup-form__name" id="popup-form__name" placeholder="Имя">
+            </li>
+            <li class="form__item">
+              <label class="visually-hidden" for="popup-form_tel">Введите телефон</label>
+              <input type="tel" name="popup-form__tel" id="popup-form__tel" placeholder="Телефон">
+            </li>
+          </ul>
+          <div class="form__question-wrapper">
+            <label class="visually-hidden" for="form__question">Введите вопрос</label>
+            <textarea name="popup-form__question" id="popup-form__question" cols="30" rows="6" placeholder="Ваш вопрос"></textarea>
+          </div>
+        </fieldset>
+        <div class="form__submit-button-wrapper">
+          <button class="form__submit-button button button--form button--popup" type="submit" name="form__submit-button">
+            <span>Отправить</span>
+          </button>
+          <div class="form__checkbox-wrapper">
+            <input type="checkbox" name="popup-form__checkbox" id="popup-form__checkbox" checked>
+            <label class="form__checkbox-label" for="popup-form__checkbox">
+              Я согласен на обработку персональных данных
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
