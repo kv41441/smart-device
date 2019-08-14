@@ -2,6 +2,7 @@
   box-sizing: border-box;
 
   position: relative;
+  z-index: 1;
 
   display: flex;
   flex-wrap: wrap;
@@ -10,17 +11,58 @@
 
   width: 1186px;
 
-  @media (max-width: 1220px) {
-    width: 100%;
+  list-style: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    bottom: -168px;
+    right: 16.2%;
+
+    width: 693px;
+    height: 693px;
+
+    background: url("../img/triangle-big-gray-ellipses.svg") no-repeat 0 0;
+    background-size: 100% 100%;
+
+    transform: rotate(30deg);
   }
 
-  list-style: none;
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+
+    top: 11px;
+    left: -210px;
+
+    width: 327px;
+    height: 327px;
+
+    background: url("../img/triangle-big-gray.svg") no-repeat 0 0;
+    background-size: 327px 327px;
+
+    transform: rotate(60deg);
+  }
+
+  @media (max-width: 1220px) {
+    width: 100%;
+
+    &::before {
+      background-size: 90% 90%;
+    }
+  }
 }
 
 .advantages-list__item {
   box-sizing: border-box;
 
   position: relative;
+  z-index: 100;
 
   margin-right: 30px;
   margin-bottom: 30px;
@@ -35,6 +77,8 @@
 
   border: 1px solid #ebebeb;
   border-left: 3px solid $color-blue;
+
+  background-color: #ffffff;
 
   &:hover {
     border: 1px solid $color-blue;
@@ -112,6 +156,18 @@
     padding: 54px 0 0 0;
 
     width: 720px;
+
+    &::before {
+      bottom: -279px;
+      right: -37.8%;
+
+      width: 713px;
+      height: 713px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .advantages-list__item {
@@ -185,6 +241,11 @@
     padding-top: 36px;
 
     width: 320px;
+
+    &::before {
+      bottom: -303px;
+      left: -8%;
+    }
   }
 
   .advantages-list__item {

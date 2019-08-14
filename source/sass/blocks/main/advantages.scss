@@ -1,23 +1,5 @@
 .advantages {
   position: relative;
-  z-index: 1;
-
-  /*&::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 636px;
-    height: 636px;
-
-    background: url("../img/triangle-big-gray.svg") no-repeat 0 0;
-    background-size: 100% 100%;
-
-    //transform: rotate(45deg);
-  }*/
 
   &::after {
     content: "";
@@ -32,8 +14,6 @@
 
     background: url("../img/triangle-big-gray.svg") no-repeat 0 0;
     background-size: 100% 100%;
-
-    //transform: rotate(45deg);
   }
 }
 
@@ -41,4 +21,12 @@
   margin: 0 auto;
 
   max-width: 1440px;
+}
+
+@media (max-width: $tablet-width) {
+  .advantages {
+    &::after {
+      display: none;
+    }
+  }
 }
