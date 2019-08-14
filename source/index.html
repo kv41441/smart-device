@@ -320,7 +320,7 @@
             <p>Мы проконсультируем Вас бесплатно</p>
           </div>
           <fieldset class="form__fields-container">
-            <ul class="form__list" role="none">
+            <ul class="form__list">
               <li class="form__item">
                 <label class="visually-hidden" for="form__name">Введите имя</label>
                 <input type="text" name="form__name" id="form__name" placeholder="Имя">
@@ -336,7 +336,7 @@
             </div>
           </fieldset>
           <div class="form__submit-button-wrapper">
-            <button class="form__submit-button button button--form" type="submit" name="form__submit-button">
+            <button class="form__submit-button button button--form" type="submit" name="form__submit-button" aria-label="Задать вопрос">
               <span>Задать вопроc</span>
             </button>
             <div class="form__checkbox-wrapper">
@@ -353,7 +353,7 @@
 
   <section class="request-call-popup request-call-popup--closed">
     <form class="request-call-popup__form form--popup" method="post" name="popup-form">
-      <button class="request-call-popup__close-button" type="button" name="request-call-popup__close-button">
+      <button class="request-call-popup__close-button" type="button" name="request-call-popup__close-button" aria-label="Закрыть форму">
         Закрыть
       </button>
       <div class="form__wrapper">
@@ -378,7 +378,7 @@
           </div>
         </fieldset>
         <div class="form__submit-button-wrapper">
-          <button class="form__submit-button button button--form button--popup" type="submit" name="form__submit-button">
+          <button class="form__submit-button button button--form button--popup" type="submit" name="form__submit-button" aria-label="Отправить">
             <span>Отправить</span>
           </button>
           <div class="form__checkbox-wrapper">
