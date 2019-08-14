@@ -224,7 +224,7 @@
     }
 
     &:focus {
-      outline-color: blue;
+      outline: 2px solid blue;
     }
   }
 
@@ -295,6 +295,10 @@
         display: block;
       }
     }
+
+    &:focus ~ label {
+      outline: 2px solid #ffffff;
+    }
   }
 
   label {
@@ -309,6 +313,14 @@
 
     opacity: 0.8;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
 
     &::before {
       content: "";

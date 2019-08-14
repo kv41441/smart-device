@@ -29,6 +29,11 @@
       fill: blue;
     }
   }
+
+
+  a:focus {
+    outline: 2px solid blue;
+  }
 }
 
 @media (max-width: $mobile-width) {

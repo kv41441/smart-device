@@ -73,6 +73,14 @@
       background-size: 8px 8px;
       background-position: 30px 27px;
     }
+
+    &:focus {
+      img {
+        outline: 2px solid #ffffff;
+
+        opacity: 0.6;
+      }
+    }
   }
 
   img {

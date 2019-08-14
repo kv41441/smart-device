@@ -41,6 +41,10 @@
       color: blue;
       opacity: 1;
     }
+
+    &:focus {
+      outline: 2px solid blue;
+    }
   }
 }
 

@@ -38,6 +38,10 @@
         fill: #ffffff;
       }
     }
+
+    &:focus {
+      outline: 2px solid #ffffff;
+    }
   }
 }
 
