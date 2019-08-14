@@ -393,7 +393,12 @@
     }
 
     textarea {
+      box-sizing: border-box;
+
+      padding-bottom: 15px;
       padding-left: 0;
+
+      width: 100%;
     }
   }
 
@@ -402,7 +407,7 @@
   }
 
   .form__submit-button-wrapper {
-    margin-top: 49px;
+    margin-top: 43px;
   }
 
   .form__checkbox-wrapper {
