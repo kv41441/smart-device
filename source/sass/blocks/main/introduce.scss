@@ -5,7 +5,7 @@
   margin: -93px 0 0 0;
   padding: 93px 0 0 0;
 
-  background: $bg-dark-color url("../img/bg-image.png") no-repeat 0 0;
+  background: $bg-dark-color url("../img/bg-image-desktop.png") no-repeat 0 0;
   background-size: 100% 100%;
 
   overflow: hidden;
@@ -145,6 +145,13 @@
 }
 
 @media (max-width: $tablet-width) {
+  .introduce {
+    margin-top: -80px;
+    padding-top: 80px;
+
+    background-image: url("../img/bg-image-tablet.png");
+  }
+
   .introduce__wrapper {
     padding-top: 30px;
     padding-bottom: 163px;
@@ -223,6 +230,13 @@
 }
 
 @media (max-width: $mobile-width) {
+  .introduce {
+    margin-top: -61px;
+    padding-top: 61px;
+
+    background-image: url("../img/bg-image-mobile.png");
+  }
+
   .introduce__wrapper {
     flex-direction: column-reverse;
 

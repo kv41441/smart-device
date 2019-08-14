@@ -19,7 +19,7 @@ const clearPopupForm = () => {
   popupQuestionInput.value = '';
 };
 
-const closePopup = (elementName) => {
+const closePopup = () => {
   requestCallPopup.classList.remove('request-call-popup--opened');
   requestCallPopup.classList.add('request-call-popup--closed');
   clearPopupForm();
