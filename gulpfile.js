@@ -16,6 +16,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var babel = require("gulp-babel");
+var uglify = require("gulp-uglify");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -35,6 +36,8 @@ gulp.task("js", function () {
     .pipe(babel({
       presets: ["@babel/env"]
     }))
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
     .pipe(gulp.dest('build/js'))
     .pipe(server.stream());
 });
