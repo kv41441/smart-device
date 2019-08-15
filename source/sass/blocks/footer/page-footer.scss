@@ -101,15 +101,30 @@
 
   width: 81.6%;
 
-  p {
+  a {
     margin: 0;
     padding: 0;
 
     @include fontPTMono(13px, 24px, $bg-dark-color);
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    text-decoration: none;
 
     opacity: 0.5;
+
+    &:hover {
+      color: $color-blue;
+      opacity: 1;
+    }
+
+    &:active {
+      color: blue;
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: 2px solid blue;
+    }
   }
 }
 
@@ -189,7 +204,7 @@
 
     width: 100%;
 
-    p {
+    a {
       &:first-of-type {
         margin-left: 3px;
       }
@@ -267,7 +282,7 @@
 
     width: 100%;
 
-    p {
+    a {
       margin: 0;
       padding: 0;
 
