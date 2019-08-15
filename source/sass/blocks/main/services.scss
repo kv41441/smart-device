@@ -34,10 +34,6 @@
     }
 
     a {
-      &::before {
-        outline: 3px solid #ffffff;
-      }
-
       &::after {
         display: block;
       }

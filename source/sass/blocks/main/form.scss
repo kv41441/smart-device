@@ -228,8 +228,8 @@
   }
 
   input {
-    padding-top: 11px;
-    padding-bottom: 18px;
+    padding-top: 13px;
+    padding-bottom: 16px;
 
     width: 270px;
   }
@@ -293,10 +293,6 @@
       &::after {
         display: block;
       }
-    }
-
-    &:focus ~ label {
-      outline: 2px solid #ffffff;
     }
   }
 
