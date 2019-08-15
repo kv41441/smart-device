@@ -1,10 +1,12 @@
 .header-nav {
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
   z-index: 10;
 
-  margin: -8px 0 0 0;
-  padding: 0;
+  margin: 0 0 0 0;
+  padding: 0 0 8px 0;
 }
 
 .header-nav__header-contacts {
@@ -21,18 +23,6 @@
   }
 
   .header-nav__button-wrapper {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    @include styleVisuallyHidden;
   }
 }

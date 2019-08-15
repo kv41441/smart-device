@@ -33,9 +33,7 @@
 
     a {
       &::before {
-        margin: -1px;
-
-        border: 1px solid #ffffff;
+        outline: 2px solid #ffffff;
       }
     }
   }
@@ -47,9 +45,7 @@
 
     a {
       &::before {
-        margin: -1px;
-
-        border: 1px solid #ffffff;
+        outline: 2px solid #ffffff;
 
         background-color: #2e80ff;
       }
@@ -148,7 +144,7 @@
   }
 
   .services__header {
-    margin: 0 0 0 -2px;
+    margin: 0;
 
     width: 615px;
 

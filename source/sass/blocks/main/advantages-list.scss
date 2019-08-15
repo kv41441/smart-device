@@ -207,11 +207,8 @@
     }
 
     &--confidentiality {
+      padding-top: 63px;
       padding-bottom: 53px;
-
-      h3 {
-        margin-top: -3px;
-      }
 
       p {
         margin-top: 14px;
@@ -276,6 +273,10 @@
       p {
         width: 250px;
       }
+    }
+
+    &--confidentiality {
+      padding-top: 69px;
     }
   }
 }

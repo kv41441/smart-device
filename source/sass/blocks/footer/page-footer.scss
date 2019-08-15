@@ -228,7 +228,7 @@
   }
 
   .page-footer__logo {
-    margin-left: -2px;
+    margin-left: 0;
   }
 
   .page-footer__wrapper {
@@ -264,7 +264,8 @@
     width: 100%;
 
     &:last-of-type {
-      margin-left: -21px;
+      justify-content: center;
+      margin-left: 0;
     }
   }
 
