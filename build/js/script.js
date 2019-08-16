@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 const requestCallButton = document.querySelector('.header-nav__button');
 const requestCallPopup = document.querySelector('.request-call-popup');
 const popupCloseButton = document.querySelector('[name = request-call-popup__close-button]');
@@ -52,25 +50,34 @@ window.addEventListener('keydown', (evt) => {
   }
 });
 
-
 // Открытие/закрытие списков в подвале
 
-footerNavHeader.addEventListener('click', () => {
-  if (footerNav.classList.contains('footer-nav--closed')) {
-    footerNav.classList.remove('footer-nav--closed');
-    footerNav.classList.add('footer-nav--opened');
-  } else {
-    footerNav.classList.remove('footer-nav--opened');
-    footerNav.classList.add('footer-nav--closed');
+$(footerNavHeader).click(() => {
+  if (footerNav.classList.contains('footer-nav--closed') && $(window).width() < 768) {
+    $('.footer-nav__list').slideDown(800);
+    $('.footer-nav').removeClass('footer-nav--closed');
+    $('.footer-nav').addClass('footer-nav--opened');
+  } else if (footerNav.classList.contains('footer-nav--opened') && $(window).width() < 768) {
+    $('.footer-nav__list').slideUp(800);
+    $('.footer-nav').removeClass('footer-nav--opened');
+    $('.footer-nav').addClass('footer-nav--closed');
   }
 });
 
-contactsHeader.addEventListener('click', () => {
-  if (contacts.classList.contains('contacts--closed')) {
-    contacts.classList.remove('contacts--closed');
-    contacts.classList.add('contacts--opened');
-  } else {
-    contacts.classList.remove('contacts--opened');
-    contacts.classList.add('contacts--closed');
+$(contactsHeader).click(() => {
+  if (contacts.classList.contains('contacts--closed') && $(window).width() < 768) {
+    $('.contacts__list').slideDown(800);
+    $('.contacts').removeClass('contacts--closed');
+    $('.contacts').addClass('contacts--opened');
+  } else if (contacts.classList.contains('contacts--opened') && $(window).width() < 768) {
+    $('.contacts__list').slideUp(800);
+    $('.contacts').removeClass('contacts--opened');
+    $('.contacts').addClass('contacts--closed');
   }
+});
+
+// Маска ввода формы телефона
+
+$(document).ready(function(){
+  $('input[type = tel]').mask('+7 (000) 000 00 00');
 });

@@ -5,6 +5,7 @@ const footerNav = document.querySelector('.footer-nav');
 const footerNavHeader = document.querySelector('.footer-nav h2');
 const contacts = document.querySelector('.contacts');
 const contactsHeader = document.querySelector('.contacts h2');
+const popupDarkBg = document.querySelector('.popup-dark-bg');
 const escKeyCode = 27;
 
 // Открытие/закрытие попапа
@@ -22,7 +23,16 @@ const clearPopupForm = () => {
 const closePopup = () => {
   requestCallPopup.classList.remove('request-call-popup--opened');
   requestCallPopup.classList.add('request-call-popup--closed');
+  popupDarkBg.classList.remove('popup-dark-bg--up');
   clearPopupForm();
+};
+
+const closePopupOnClickListener = () => {
+  popupDarkBg.addEventListener('click', () => {
+    if (requestCallPopup.classList.contains('request-call-popup--opened')) {
+      closePopup();
+    }
+  });
 };
 
 requestCallButton.addEventListener('click', (evt) => {
@@ -31,6 +41,8 @@ requestCallButton.addEventListener('click', (evt) => {
   if (requestCallPopup.classList.contains('request-call-popup--closed')) {
     requestCallPopup.classList.remove('request-call-popup--closed');
     requestCallPopup.classList.add('request-call-popup--opened');
+    popupDarkBg.classList.add('popup-dark-bg--up');
+    closePopupOnClickListener();
   } else {
     closePopup();
   }
@@ -52,7 +64,7 @@ window.addEventListener('keydown', (evt) => {
 
 // Открытие/закрытие списков в подвале
 
-$(footerNavHeader).click(function(){
+$(footerNavHeader).click(() => {
   if (footerNav.classList.contains('footer-nav--closed') && $(window).width() < 768) {
     $('.footer-nav__list').slideDown(800);
     $('.footer-nav').removeClass('footer-nav--closed');
@@ -64,7 +76,7 @@ $(footerNavHeader).click(function(){
   }
 });
 
-$(contactsHeader).click(function(){
+$(contactsHeader).click(() => {
   if (contacts.classList.contains('contacts--closed') && $(window).width() < 768) {
     $('.contacts__list').slideDown(800);
     $('.contacts').removeClass('contacts--closed');
@@ -74,4 +86,10 @@ $(contactsHeader).click(function(){
     $('.contacts').removeClass('contacts--opened');
     $('.contacts').addClass('contacts--closed');
   }
+});
+
+// Маска ввода формы телефона
+
+$(document).ready(function(){
+  $('input[type = tel]').mask('+7 (000) 000 00 00');
 });

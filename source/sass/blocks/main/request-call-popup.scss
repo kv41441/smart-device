@@ -1,3 +1,22 @@
+.popup-dark-bg {
+  display: none;
+}
+
+.popup-dark-bg--up {
+  display: block;
+  position: fixed;
+  z-index: 90;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .request-call-popup {
   position: fixed;
   z-index: 100;
@@ -13,21 +32,6 @@
 
   &--opened {
     display: block;
-
-    &::before {
-      content: "";
-
-      position: absolute;
-      z-index: -1;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-
-      width: 100vw;
-      height: 100vh;
-
-      background-color: rgba(0, 0, 0, 0.5);
-    }
   }
 
   &--closed {

@@ -88,13 +88,17 @@
     h3,
     p {
       color: #ffffff;
+
+      transition-delay: 0.1s;
     }
 
     svg {
       fill: #ffffff;
+
+      transition-delay: 0.1s;
     }
 
-    transition: background-color 1.5s;
+    transition: background-color 1s;
 
     cursor: pointer;
   }

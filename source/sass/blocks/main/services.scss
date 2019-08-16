@@ -31,6 +31,7 @@
   &:hover {
     img {
       opacity: 0.4;
+      transition: opacity 1s;
     }
 
     a {
