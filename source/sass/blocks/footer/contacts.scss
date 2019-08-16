@@ -121,10 +121,6 @@
     &--closed {
       padding-bottom: 15px;
 
-      .contacts__list {
-        @include styleVisuallyHidden;
-      }
-
       &::after {
         display: block;
       }

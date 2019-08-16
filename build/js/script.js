@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const requestCallButton = document.querySelector('.header-nav__button');
 const requestCallPopup = document.querySelector('.request-call-popup');
 const popupCloseButton = document.querySelector('[name = request-call-popup__close-button]');

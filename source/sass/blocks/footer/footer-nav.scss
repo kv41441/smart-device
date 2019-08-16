@@ -131,10 +131,6 @@
     }
 
     &--closed {
-      .footer-nav__list {
-        @include styleVisuallyHidden;
-      }
-
       &::after {
         display: block;
       }
