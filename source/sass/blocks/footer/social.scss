@@ -48,6 +48,14 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .social__item {
+    &--vk {
+      margin-right: 12px;
+    }
+  }
+}
+
 @media (max-width: $mobile-width) {
   .social {
     flex-grow: 1;

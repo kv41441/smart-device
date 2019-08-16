@@ -1,11 +1,11 @@
 .contacts {
   box-sizing: border-box;
 
-  padding: 0 0 0 40px;
-
-  width: 38.1%;
+  padding: 0 0 0 43px;
 
   h2 {
+    margin-left: 1px;
+
     @include fontRobotoCondensed(15px, 16px, $bg-dark-color);
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -52,7 +52,7 @@
   .contacts {
     padding-left: 7px;
 
-    width: 48%;
+    width: 46%;
   }
 }
 
