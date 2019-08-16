@@ -188,6 +188,20 @@
 
     border-left-width: 2px;
 
+    &:hover {
+      padding-left: 26px;
+
+      svg {
+        left: 26px;
+      }
+
+      &--confidentiality {
+        svg {
+          left: 27px;
+        }
+      }
+    }
+
     h3 {
       width: 320px;
 
