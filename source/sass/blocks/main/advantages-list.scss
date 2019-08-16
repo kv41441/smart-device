@@ -83,6 +83,8 @@
   &:hover {
     border: 1px solid $color-blue;
 
+    padding-left: 44px;
+
     background-color: $color-blue;
 
     h3,
@@ -93,9 +95,11 @@
     }
 
     svg {
+      left: 44px;
+
       fill: #ffffff;
 
-      transition-delay: 0.1s;
+      transition-delay: fill 0.01s;
     }
 
     transition: background-color 1s;
